@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import {
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import IpfsRouter from 'ipfs-react-router'
 
 import './i18n';
 import interestTheme from './theme';
@@ -57,7 +57,7 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={ createMuiTheme(interestTheme) }>
         <CssBaseline />
-        <IpfsRouter>
+        <Router>
           <div style={{
             display: 'flex',
             flexDirection: 'column',
@@ -103,7 +103,7 @@ class App extends Component {
             </Switch>
             <Footer />
           </div>
-        </IpfsRouter>
+        </Router>
       </MuiThemeProvider>
     );
   }
